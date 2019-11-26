@@ -1,0 +1,86 @@
+//Variables
+
+@pr-white: #fff;
+@pr-bidblue: #004E70;
+@pr-grey: #F7F7F7;
+@pr-dkgrey: #E2E2E2;
+@pr-link: #0F9DD3;
+@pr-orange: #F9B433;
+@pr-green: #33AC42;
+
+
+
+.html {
+    font-family: 'GothamHTF-Book',sans-serif;
+    font-size: 16px;
+}
+
+.pr-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 270px;
+    background-image: url("../img/bg-cover.png");
+    background-position: center;
+    background-size: cover;
+    &:after {
+        content: url("../img/bg-shape.png");
+        height: 270px;
+        position: absolute;
+        right: 0;
+    }
+    .pr-cover-cont {
+        .pr-title {
+            margin: 0;
+            color: @pr-white;
+            text-transform: uppercase;
+            font-size: 4.5rem;
+            &:after {
+                display: block;
+                margin-top: -20px;
+                content: url("../img/title-shape.png");
+            }
+        }
+    }
+}
+
+.pr-content {
+    background-color: @pr-dkgrey;
+    .pr-menu {
+        border-top: 14px solid @pr-bidblue;
+        border-bottom: 14px solid @pr-bidblue;
+        .pr-menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: @pr-white;
+            li {
+                display: inline-block;
+                padding: 15px;
+                
+                &.active {
+                    position: relative;
+                    background-color: @pr-grey;
+                    a {
+                        color: @pr-orange;
+                    }
+                    &:after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        content: '';
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-bottom: 5px solid @pr-bidblue;
+                    }
+                }
+                a {
+                    color: @pr-bidblue;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
