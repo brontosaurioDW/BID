@@ -1,17 +1,22 @@
-.html {
+html {
   font-family: 'GothamHTF-Book', sans-serif;
   font-size: 16px;
+  background-color: #E2E2E2;
 }
 .pr-cover {
+  background-color: #E2E2E2;
+}
+.pr-cover .pr-cover-cont {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 270px;
+  padding: 20px;
   background-image: url("../img/bg-cover.png");
   background-position: center;
   background-size: cover;
 }
-.pr-cover:after {
+.pr-cover .pr-cover-cont:after {
   content: url("../img/bg-shape.png");
   height: 270px;
   position: absolute;
@@ -19,6 +24,7 @@
 }
 .pr-cover .pr-cover-cont .pr-title {
   margin: 0;
+  margin-left: 10%;
   color: #fff;
   text-transform: uppercase;
   font-size: 4.5rem;
@@ -66,4 +72,30 @@
   font-size: 1.6rem;
   font-weight: 500;
   text-transform: uppercase;
+}
+.pr-content .pr-slider .slick-prev,
+.pr-content .pr-slider .slick-next {
+  width: 18px;
+  height: 30px;
+}
+.pr-content .pr-slider .slick-prev {
+  left: 20px;
+}
+.pr-content .pr-slider .slick-next {
+  right: 20px;
+}
+.pr-content .pr-slider .slick-slide .slide {
+  position: relative;
+}
+.pr-content .pr-slider .slick-slide .slide img {
+  width: 100%;
+}
+.pr-content .pr-slider .slick-slide .slide .slide-content {
+  position: absolute;
+  bottom: 0;
+  background-color: #004e7052;
+  background-image: url(https://www.iadb.org/themes/custom/iadb/images/backgrounds/IDB_Homepage_Hero.png);
+  width: 100%;
+  margin: -0.2rem 0 0 0;
+  padding: 1rem;
 }

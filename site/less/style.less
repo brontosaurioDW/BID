@@ -10,28 +10,32 @@
 
 
 
-.html {
+html {
     font-family: 'GothamHTF-Book',sans-serif;
     font-size: 16px;
+    background-color: @pr-dkgrey;
 }
 
 .pr-cover {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 270px;
-    background-image: url("../img/bg-cover.png");
-    background-position: center;
-    background-size: cover;
-    &:after {
-        content: url("../img/bg-shape.png");
-        height: 270px;
-        position: absolute;
-        right: 0;
-    }
+    background-color: @pr-dkgrey;
     .pr-cover-cont {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 270px;
+        padding: 20px;
+        background-image: url("../img/bg-cover.png");
+        background-position: center;
+        background-size: cover;
+        &:after {
+            content: url("../img/bg-shape.png");
+            height: 270px;
+            position: absolute;
+            right: 0;
+        }
         .pr-title {
             margin: 0;
+            margin-left: 10%;
             color: @pr-white;
             text-transform: uppercase;
             font-size: 4.5rem;
@@ -81,6 +85,37 @@
                     text-transform: uppercase;
                 }
             }
+        }
+    }
+    .pr-slider {
+        .slick-prev,
+        .slick-next {
+            width: 18px;
+            height: 30px;
+        }
+        .slick-prev {
+            left: 20px;
+        }
+        .slick-next {
+            right: 20px;
+        }
+        .slick-slide {
+            .slide {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                .slide-content {
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #004e7052;
+                    background-image: url(https://www.iadb.org/themes/custom/iadb/images/backgrounds/IDB_Homepage_Hero.png);
+                    width: 100%;
+                    margin: -0.2rem 0 0 0;
+                    padding: 1rem;
+                }
+            }
+            
         }
     }
 }
