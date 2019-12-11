@@ -3,6 +3,37 @@ html {
   font-size: 12px;
   background-color: #E2E2E2;
 }
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.pr-stitle {
+  font-size: 2.2rem;
+  color: #004E70;
+  text-transform: uppercase;
+}
+.pr-btn {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.pr-btn-md {
+  font-size: 2rem;
+  border: 2px solid #0F9DD3;
+}
+.pr-btn-sm {
+  font-size: 1.5rem;
+  border: 1px solid #0F9DD3;
+}
+.pr-btn-prim {
+  background-color: #0F9DD3;
+  color: #fff;
+}
+.pr-btn-sec {
+  background-color: transparent;
+  color: #0F9DD3;
+}
 .pr-cover {
   background-color: #E2E2E2;
 }
@@ -36,6 +67,9 @@ html {
 }
 .pr-content {
   background-color: #E2E2E2;
+}
+.pr-content .pr-main-container {
+  background-color: #fff;
 }
 .pr-content .pr-menu {
   border-top: 14px solid #004E70;
@@ -77,9 +111,11 @@ html {
 .pr-content .pr-slider .slick-next {
   width: 18px;
   height: 30px;
+  top: 80%;
 }
 .pr-content .pr-slider .slick-prev {
   left: 20px;
+  z-index: 1;
 }
 .pr-content .pr-slider .slick-next {
   right: 20px;
@@ -93,9 +129,48 @@ html {
 .pr-content .pr-slider .slick-slide .slide .slide-content {
   position: absolute;
   bottom: 0;
+  padding: 30px 120px 60px 120px;
   background-color: #004e7052;
   background-image: url(https://www.iadb.org/themes/custom/iadb/images/backgrounds/IDB_Homepage_Hero.png);
   width: 100%;
   margin: -0.2rem 0 0 0;
-  padding: 1rem;
+  color: #fff;
+}
+.pr-content .pr-slider .slick-slide .slide .slide-content .slide-title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.pr-content .pr-slider .slick-slide .slide .slide-content .slide-info {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.pr-content .pr-slider .slick-dots {
+  bottom: 20px;
+}
+.pr-content .pr-slider .slick-dots li button:before {
+  font-size: 35px;
+}
+.pr-content .pr-slider .slick-dots li.slick-active button:before {
+  color: #fff;
+}
+.pr-content .pr-news-container .pr-news-content {
+  width: 80%;
+}
+.pr-content .pr-news-container .pr-news-content .pr-news-list {
+  padding: 0;
+  list-style: none;
+}
+.pr-content .pr-news-container .pr-news-content .pr-news-list .pr-news-single .pr-news-title {
+  font-size: 2rem;
+  color: #0F9DD3;
+  text-transform: uppercase;
+}
+.pr-content .pr-news-container .pr-news-content .pr-news-list .pr-news-single .pr-news-date {
+  font-size: 0.8rem;
+  color: #E2E2E2;
+}
+.pr-content .pr-news-container .pr-news-content .pr-news-list .pr-news-single .pr-news-info {
+  font-size: 1rem;
 }

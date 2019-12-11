@@ -1,4 +1,4 @@
-//Variables
+// Variables
 
 @pr-white: #fff;
 @pr-bidblue: #004E70;
@@ -9,12 +9,62 @@
 @pr-green: #33AC42;
 
 
+// HTML
 
 html {
     font-family: 'GothamHTF-Book',sans-serif;
     font-size: 12px;
     background-color: @pr-dkgrey;
 }
+
+
+// General classes
+
+.d-flex {
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: -webkit-flex;
+    display: flex;        
+}
+
+// Titles
+
+.pr-stitle {
+    font-size: 2.2rem;
+    color: @pr-bidblue;
+    text-transform: uppercase;
+}
+
+
+// Buttons
+
+.pr-btn {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.pr-btn-md {
+    font-size: 2rem;
+    border: 2px solid @pr-link;
+}
+
+.pr-btn-sm {
+    font-size: 1.5rem;
+    border: 1px solid @pr-link;
+}
+
+.pr-btn-prim {
+    background-color: @pr-link;
+    color: @pr-white;
+}
+
+.pr-btn-sec {
+    background-color: transparent;
+    color: @pr-link;
+}
+
+
+// Cover
 
 .pr-cover {
     background-color: @pr-dkgrey;
@@ -48,8 +98,18 @@ html {
     }
 }
 
+
+
+
 .pr-content {
     background-color: @pr-dkgrey;
+
+    .pr-main-container {
+        background-color: @pr-white;
+    }
+
+    // Menu
+
     .pr-menu {
         border-top: 14px solid @pr-bidblue;
         border-bottom: 14px solid @pr-bidblue;
@@ -87,14 +147,19 @@ html {
             }
         }
     }
+
+    // Mejorando Vidas carousel
+
     .pr-slider {
         .slick-prev,
         .slick-next {
             width: 18px;
             height: 30px;
+            top: 80%;
         }
         .slick-prev {
             left: 20px;
+            z-index: 1;
         }
         .slick-next {
             right: 20px;
@@ -108,14 +173,70 @@ html {
                 .slide-content {
                     position: absolute;
                     bottom: 0;
+                    padding: 30px 120px 60px 120px;
                     background-color: #004e7052;
                     background-image: url(https://www.iadb.org/themes/custom/iadb/images/backgrounds/IDB_Homepage_Hero.png);
                     width: 100%;
                     margin: -0.2rem 0 0 0;
-                    padding: 1rem;
+                    color: @pr-white;
+                    .slide-title {
+                        display: block;
+                        margin-bottom: 12px;
+                        font-size: 2rem;
+                        text-transform: uppercase;
+                    }
+                    .slide-info {
+                        font-size: 1.4rem;
+                        line-height: 2rem;
+                    }
                 }
             }
             
         }
+
+        .slick-dots {
+            bottom: 20px;
+            li {
+                button:before {
+                    font-size: 35px;
+                }
+            }
+            li.slick-active button:before {
+                color: @pr-white;
+            }
+        }
     }
+
+    // News
+
+    .pr-news-container {
+
+        .pr-news-content {
+            width: 80%;
+            .pr-news-list {
+                padding: 0;
+                list-style: none;
+                .pr-news-single {
+                    .pr-news-title {
+                        font-size: 2rem;
+                        color: @pr-link;
+                        text-transform: uppercase;
+                    }
+                    .pr-news-date {
+                        font-size: 0.8rem;
+                        color: @pr-dkgrey;
+                    }
+                    .pr-news-info {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        
+    }
+
+
+    
 }
+
+
