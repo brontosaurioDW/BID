@@ -13,7 +13,7 @@
 // HTML
 
 html {
-    font-family: 'GothamHTF-Book',sans-serif;
+    font-family: 'GothamHTF-Book', sans-serif;
     font-size: 12px;
     background-color: @pr-dkgrey;
     color: @pr-darker;
@@ -23,19 +23,23 @@ html {
 // General classes
 
 .d-flex {
-    display: -webkit-box; 
-    display: -ms-flexbox; 
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex;        
+    display: flex;
 }
 
 .d-grid {
-    display:-ms-grid;
-    display:grid;
+    display: -ms-grid;
+    display: grid;
 }
 
 .space-between {
     justify-content: space-between;
+}
+
+.flex-column {
+    flex-direction: column;
 }
 
 // Titles
@@ -47,7 +51,7 @@ html {
 }
 
 .pr-description {
-    
+    margin: 15px 0 30px;
 }
 
 
@@ -89,6 +93,7 @@ html {
 
 .pr-cover {
     background-color: @pr-dkgrey;
+
     .pr-cover-cont {
         position: relative;
         display: flex;
@@ -98,18 +103,21 @@ html {
         background-image: url("../img/bg-cover.png");
         background-position: center;
         background-size: cover;
+
         &:after {
             content: url("../img/bg-shape.png");
             height: 270px;
             position: absolute;
             right: 0;
         }
+
         .pr-title {
             margin: 0;
             margin-left: 10%;
             color: @pr-white;
             text-transform: uppercase;
             font-size: 4.5rem;
+
             &:after {
                 display: block;
                 margin-top: -20px;
@@ -146,21 +154,25 @@ html {
     .pr-menu {
         border-top: 14px solid @pr-bidblue;
         border-bottom: 14px solid @pr-bidblue;
+
         .pr-menu-list {
             list-style: none;
             margin: 0;
             padding: 0;
             background-color: @pr-white;
+
             li {
                 display: inline-block;
                 padding: 15px;
-                
+
                 &.active {
                     position: relative;
                     background-color: @pr-grey;
+
                     a {
                         color: @pr-orange;
                     }
+
                     &:after {
                         position: absolute;
                         bottom: 0;
@@ -171,11 +183,13 @@ html {
                         border-bottom: 5px solid @pr-bidblue;
                     }
                 }
+
                 a {
                     color: @pr-bidblue;
                     font-size: 1.6rem;
                     font-weight: 500;
                     text-transform: uppercase;
+                    text-decoration: none;
                 }
             }
         }
@@ -184,25 +198,31 @@ html {
     // Mejorando Vidas carousel
 
     .pr-slider {
+
         .slick-prev,
         .slick-next {
             width: 18px;
             height: 30px;
             top: 80%;
         }
+
         .slick-prev {
             left: 20px;
             z-index: 1;
         }
+
         .slick-next {
             right: 20px;
         }
+
         .slick-slide {
             .slide {
                 position: relative;
+
                 img {
                     width: 100%;
                 }
+
                 .slide-content {
                     position: absolute;
                     bottom: 0;
@@ -212,28 +232,32 @@ html {
                     width: 100%;
                     margin: -0.2rem 0 0 0;
                     color: @pr-white;
+
                     .slide-title {
                         display: block;
                         margin-bottom: 12px;
                         font-size: 2rem;
                         text-transform: uppercase;
                     }
+
                     .slide-info {
                         font-size: 1.4rem;
                         line-height: 2rem;
                     }
                 }
             }
-            
+
         }
 
         .slick-dots {
             bottom: 20px;
+
             li {
                 button:before {
                     font-size: 35px;
                 }
             }
+
             li.slick-active button:before {
                 color: @pr-white;
             }
@@ -246,9 +270,11 @@ html {
 
         .pr-news-content {
             width: 76%;
+
             .pr-news-list {
                 padding: 0;
                 list-style: none;
+
                 .pr-news-single {
                     .pr-news-title {
                         margin: 25px 0 5px;
@@ -256,11 +282,13 @@ html {
                         color: @pr-link;
                         text-transform: uppercase;
                     }
+
                     .pr-news-date {
                         display: block;
                         margin-bottom: 10px;
                         font-size: 1rem;
                     }
+
                     .pr-news-info {
                         margin-bottom: 25px;
                         font-size: 1.4rem;
@@ -271,27 +299,31 @@ html {
                     }
                 }
             }
+
             .pr-news-buttons {
                 .pr-btn:not(:last-child) {
                     margin-right: 20px;
                 }
             }
         }
-        
+
         .pr-news-banners {
             width: 22%;
+
             .pr-news-box {
                 margin-bottom: 30px;
                 padding: 20px;
                 border: 1px solid @pr-link;
                 border-top: 20px solid @pr-link;
                 text-align: center;
+
                 .pr-nb-span {
                     display: block;
                     margin-bottom: 10px;
                     text-transform: uppercase;
                 }
             }
+
             .pr-btn-banner {
                 display: block;
                 width: 100%;
@@ -302,9 +334,7 @@ html {
     }
 
 
-    .pr-media-container {
-
-    }
+    .pr-media-container {}
 
     .pr-resources-container {
         .pr-resources-list {
@@ -312,27 +342,148 @@ html {
             grid-column-gap: 20px;
             grid-row-gap: 20px;
             padding: 0;
+
             .pr-resource {
-                justify-content: space-between;
+                padding: 20px;
                 background-color: @pr-link;
                 color: @pr-white;
-                .pr-r-icon {
-                    width: 30%;
-                    img {
-                        max-width: 100%;
+                border-radius: 0 25px;
+
+                .pr-resource-link {
+                    color: @pr-white;
+                    text-decoration: none;
+
+                    .pr-r-icon {
+                        width: 25%;
+
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+
+                    .pr-r-info {
+                        width: 70%;
+                        justify-content: center;
+
+                        .pr-r-title {
+                            margin: 5px 0;
+                            text-transform: uppercase;
+                            font-size: 1.4rem;
+                        }
+
+                        .pr-r-dets {
+                            font-size: 1.2rem;
+                        }
                     }
                 }
-                .pr-r-info {
-                    width: 68%;
+
+
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1200px) { 
+
+    .pr-cover {
+        .pr-cover-cont {
+            .pr-title {
+                font-size: 3rem;
+                &:after {
+                    margin-top: -15px;
                 }
             }
         }
     }
 
-    
+    .pr-content {
+        .pr-news-container {
+            .pr-news-banners {
+                .pr-news-box {
+                    .pr-btn:nth-of-type(2n) {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
 
 
-    
 }
 
 
+@media (max-width: 992px) { 
+
+    .pr-content {
+
+        .pr-menu {
+            .pr-menu-list {
+                li {
+                    padding: 10px;
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .pr-resources-container {
+            .pr-resources-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .pr-news-container {
+            .pr-news-content {
+                width: 100%;
+            }
+            .pr-news-banners {
+                width: 100%;
+                
+                .pr-news-box {
+                    margin-top: 30px;
+                }
+            }
+        }
+        
+    }
+    
+ }
+
+
+ @media (max-width: 738px) { 
+
+    .pr-content {
+
+        .pr-menu {
+            .pr-menu-list {
+                li {
+                    &.active:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .pr-news-container {
+
+            .pr-news-content {
+                .pr-news-buttons {
+                    .pr-btn {
+                        display: block;
+                        margin: 10px 0;    
+                    }
+                }
+            }
+        }
+
+        .pr-resources-container {
+            .pr-resources-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+    }
+    
+ }
