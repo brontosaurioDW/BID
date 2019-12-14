@@ -163,6 +163,8 @@ html {
   width: 100%;
   margin: -0.2rem 0 0 0;
   color: #fff;
+  text-decoration: none;
+  cursor: pointer;
 }
 .pr-content .pr-slider .slick-slide .slide .slide-content .slide-title {
   display: block;
@@ -244,6 +246,7 @@ html {
   border-radius: 0 25px;
 }
 .pr-content .pr-resources-container .pr-resources-list .pr-resource .pr-resource-link {
+  align-items: center;
   color: #fff;
   text-decoration: none;
 }
@@ -258,7 +261,7 @@ html {
   justify-content: center;
 }
 .pr-content .pr-resources-container .pr-resources-list .pr-resource .pr-resource-link .pr-r-info .pr-r-title {
-  margin: 5px 0;
+  margin: 0 0 5px 0;
   text-transform: uppercase;
   font-size: 1.4rem;
 }
@@ -286,13 +289,16 @@ html {
   .pr-content .pr-resources-container .pr-resources-list {
     grid-template-columns: 1fr 1fr;
   }
-  .pr-content .pr-news-container .pr-news-content {
+  .pr-content .pr-news-container .pr-news-box {
+    flex-direction: column;
+  }
+  .pr-content .pr-news-container .pr-news-box .pr-news-content {
     width: 100%;
   }
-  .pr-content .pr-news-container .pr-news-banners {
+  .pr-content .pr-news-container .pr-news-box .pr-news-banners {
     width: 100%;
   }
-  .pr-content .pr-news-container .pr-news-banners .pr-news-box {
+  .pr-content .pr-news-container .pr-news-box .pr-news-banners .pr-news-box {
     margin-top: 30px;
   }
 }
@@ -300,11 +306,26 @@ html {
   .pr-content .pr-menu .pr-menu-list li.active:after {
     display: none;
   }
+  .pr-content .pr-slider .slick-slide {
+    height: 500px;
+  }
+  .pr-content .pr-slider .slick-slide .slide img {
+    height: 500px;
+    width: auto;
+  }
+  .pr-content .pr-slider .slick-slide .slide .slide-content {
+    padding: 30px 60px 60px 60px;
+  }
   .pr-content .pr-news-container .pr-news-content .pr-news-buttons .pr-btn {
     display: block;
     margin: 10px 0;
   }
   .pr-content .pr-resources-container .pr-resources-list {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .pr-cover .pr-cover-cont:after {
+    content: none;
   }
 }

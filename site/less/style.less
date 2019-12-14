@@ -232,6 +232,8 @@ html {
                     width: 100%;
                     margin: -0.2rem 0 0 0;
                     color: @pr-white;
+                    text-decoration: none;
+                    cursor: pointer;
 
                     .slide-title {
                         display: block;
@@ -350,6 +352,7 @@ html {
                 border-radius: 0 25px;
 
                 .pr-resource-link {
+                    align-items: center;
                     color: @pr-white;
                     text-decoration: none;
 
@@ -366,7 +369,7 @@ html {
                         justify-content: center;
 
                         .pr-r-title {
-                            margin: 5px 0;
+                            margin: 0 0 5px 0;
                             text-transform: uppercase;
                             font-size: 1.4rem;
                         }
@@ -435,16 +438,20 @@ html {
         }
 
         .pr-news-container {
-            .pr-news-content {
-                width: 100%;
-            }
-            .pr-news-banners {
-                width: 100%;
-                
-                .pr-news-box {
-                    margin-top: 30px;
+            .pr-news-box {
+                flex-direction: column;
+                .pr-news-content {
+                    width: 100%;
+                }
+                .pr-news-banners {
+                    width: 100%;
+                    
+                    .pr-news-box {
+                        margin-top: 30px;
+                    }
                 }
             }
+            
         }
         
     }
@@ -466,6 +473,24 @@ html {
             }
         }
 
+        .pr-slider {
+            .slick-slide {
+                height:500px;
+             }
+             
+             .slick-slide .slide {
+                img {
+                    height:500px;
+                    width: auto;
+                 }
+                 .slide-content {
+                     padding: 30px 60px 60px 60px;
+                 }
+             } 
+        }
+
+        
+
         .pr-news-container {
 
             .pr-news-content {
@@ -486,4 +511,15 @@ html {
         
     }
     
+ }
+
+
+ @media (max-width: 560px) { 
+
+    .pr-cover {
+        .pr-cover-cont:after {
+            content: none;
+        }
+    }
+
  }
